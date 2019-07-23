@@ -1,14 +1,13 @@
 package main
 
 import (
-	"fmt"
 	"net/http"
 	"github.com/gorilla/mux"
 	"./views"
 )
 
-var homeTemplate *views.View
-var contactTemplate *views.View
+var homeView *views.View
+var contactView *views.View
 
 func home(w http.ResponseWriter, r *http.Request){
 	w.Header().Set("Content-Type", "text/html")
